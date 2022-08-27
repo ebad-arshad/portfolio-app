@@ -1,0 +1,79 @@
+.nav_list {
+    display: none;
+}
+
+.hamburger {
+    display: block !important;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+}
+
+.home div:nth-child(1) {
+    font-size: 20px;
+}
+
+.home div:nth-child(2) {
+    font-size: 40px;
+}
+
+.home div:nth-child(3) {
+    font-size: 23px;
+}
+
+.txt-rotate {
+    font-size: 30px;
+}
+
+.last_cards {
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+}
+
+.project_box {
+    height: 1150px;
+}
+
+.desc {
+    flex-direction: column;
+}
+
+.desc_img {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.desc_img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.desc_text {
+    width: 100%;
+}
+
+.skill_data {
+    gap: 40px;
+}
+
+.skill_col_1,
+.skill_col_2 {
+    width: 100%;
+}
+
+.contact_data {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact_col_1,
+.contact_col_2 {
+    width: 100%;
+}

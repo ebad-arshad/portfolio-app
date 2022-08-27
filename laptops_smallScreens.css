@@ -1,0 +1,14 @@
+.cards {
+    gap: 10px;
+}
+
+.card {
+    width: 49%;
+}
+.card:nth-child(3) {
+    width: 100%;
+}
+
+.project_box {
+    height: 850px;
+}

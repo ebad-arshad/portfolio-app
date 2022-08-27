@@ -1,0 +1,770 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+
+/* 
+#dc143c Red
+#fff White
+#222 Light Black
+#111 Black
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* ===========Download CV Button=========== */
+
+#fixed_download_cv button {
+    position: fixed;
+    left: 40px;
+    z-index: 100;
+    bottom: 25px;
+    color: #dc143c;
+    background: transparent;
+    border: 2px solid #dc143c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#fixed_download_cv button:hover {
+    color: white;
+    background: #dc143c;
+    transition: .2s;
+}
+
+/* ===========Go to Top=========== */
+
+.go_to_top button {
+    z-index: 100;
+    position: fixed;
+    right: 40px;
+    bottom: 25px;
+    color: #dc143c;
+    background: transparent;
+    border: 2px solid #dc143c;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.go_to_top button:hover {
+    background: #dc143c;
+    color: #fff;
+    transition: .2s;
+}
+
+/* ===========NavBar=========== */
+
+nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: Ubuntu;
+    font-weight: bold;
+    transition: .5s;
+}
+
+nav>div {
+    width: inherit;
+    margin: 0px 10%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 35px;
+    flex: 1;
+}
+
+.logo p {
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #dc143c;
+}
+
+.nav_list>ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    letter-spacing: 1px;
+}
+
+.nav_items a {
+    cursor: pointer;
+    color: white;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.nav_items:hover {
+    color: #dc143c;
+    transition: .2s;
+}
+
+.slide_bar {
+    color: white;
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    background: #111;
+    border: 1px solid #000;
+    transition: .2s;
+    z-index: 100;
+}
+
+.responsive_list {
+    font-family: Ubuntu;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.responsive_list>ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 30px;
+}
+
+.responsive_items a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.responsive_items a:hover {
+    color: #dc143c !important;
+    transition: .2s;
+}
+
+.close_btn {
+    height: 100px;
+    margin: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fa-xmark {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+
+}
+
+/* ===========Home=========== */
+
+.home {
+    min-height: 100vh;
+    font-family: Ubuntu;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 250px 0;
+    margin: 0 10%;
+    color: white;
+    height: 100vh;
+}
+
+.home div:nth-child(1) {
+    font-size: 25px;
+}
+
+.home div:nth-child(2) {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.home div:nth-child(3) {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.hire_btn button {
+    color: white;
+    background: #dc143c;
+    border: 2px solid #dc143c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.hire_btn button:hover {
+    color: #dc143c;
+    background: transparent;
+    transition: .2s;
+}
+
+/* Typing Effect */
+
+.txt-rotate {
+    font-weight: bold;
+    color: #dc143c;
+    font-size: 35px;
+}
+
+.txt-rotate>.wrap {
+    border-right: 3px solid #dc143c !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===========About=========== */
+
+.about_sec {
+    background: white;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.about_box {
+    margin: 0 10%;
+}
+
+.heading {
+    font-family: Ubuntu;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 auto 50px auto;
+}
+
+.topic {
+    font-size: 40px;
+}
+
+.topic_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.topic_desc span {
+    width: 20%;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+}
+
+.topic_desc p {
+    font-size: 20px;
+    width: fit-content;
+    color: #dc143c;
+}
+
+.desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.desc_img {
+    width: 35%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.desc_img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.desc_text {
+    font-family: Poppins;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 55%;
+}
+
+.desc_text>div {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.desc_typing_effect {
+    font-size: 25px;
+}
+
+/* ===========Project=========== */
+.project_sec {
+    background: #111;
+    padding: 100px 0 30px 0;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.project_box {
+    margin: 0 10%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project_sec .heading {
+    color: white;
+}
+
+.project_sec .heading span {
+    background: white;
+    width: 6%;
+}
+
+.card_collection {
+    transition: .2s;
+    position: absolute;
+    top: 220px;
+    display: flex;
+    width: 300%;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.last_cards {
+    justify-content: flex-start;
+}
+
+.card {
+    position: relative;
+    padding: 30px 20px;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+    font-family: Poppins;
+    text-align: center;
+    min-height: 300px;
+    border-radius: 5px;
+    background: #222;
+    transition: .2s;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover .icon,
+.card:hover .card_heading,
+.card:hover .card_desc {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.card:hover {
+    background: #dc143c;
+    transition: .2s;
+}
+
+.icon,
+.card_heading,
+.card_desc {
+    transition: .2s;
+    pointer-events: none;
+}
+
+.card img {
+    width: 80px;
+}
+
+.card_heading {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hidden_icons {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    transition: .2s;
+}
+
+.card:hover {
+    justify-content: flex-start;
+    transition: .2s;
+}
+
+.card:hover .hidden_icons {
+    top: 85%;
+    transition: .2s;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 18px;
+}
+
+.col a {
+    display: flex;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-linkedin-in,
+.fa-github,
+.fa-earth-asia {
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    color: #dc143c;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 50px 0;
+    gap: 20px;
+}
+
+.arrows>div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.move_backward,
+.move_forward {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: #dc143c;
+    border: 2px solid #dc143c;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.move_backward:hover,
+.move_forward:hover {
+    background: none;
+    color: #dc143c;
+    transition: .2s;
+}
+
+.dots span {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
+
+/* ===========Skills=========== */
+
+.skills_sec {
+    background: #fff;
+    padding: 100px 0 30px 0;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.skills_sec .topic_desc span {
+    width: 10%;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+}
+
+.skill_data {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 10%;
+    justify-content: space-between;
+    color: #000;
+    font-family: Poppins;
+    flex-wrap: wrap;
+}
+
+.skill_col_1 {
+    width: 47%;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    padding: 0 10px 0 0;
+    text-align: justify;
+}
+
+.skill_heading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.skill_col_2 {
+    width: 47%;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    padding: 0 10px 0 0;
+
+}
+
+.skill_lang {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.for_lang {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.range {
+    width: 100%;
+    height: 5px;
+    background: #d3d3d3;
+    position: relative;
+}
+
+.range::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: var(--prog);
+    background: #dc143c;
+    height: 5px;
+}
+
+/* ===========Contact Me=========== */
+
+.contact_sec {
+    background: #000;
+    padding: 100px 0 100px 0;
+    overflow: hidden;
+    min-height: 93vh;
+}
+
+.contact_sec .heading {
+    color: #fff;
+}
+
+.contact_sec span {
+    background: #fff;
+}
+
+.contact_data {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    font-family: Poppins;
+}
+
+.contact_col_1 {
+    width: 47%;
+    color: #fff;
+    text-align: justify;
+}
+
+.contact_col_2 {
+    width: 47%;
+    color: #fff;
+    text-align: justify;
+}
+
+.contact_heading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact_info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact_name,
+.contact_email {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.name_icon,
+.email_icon {
+    font-size: 25px;
+}
+
+.fa-user,
+.fa-envelope {
+    color: #dc143c;
+}
+
+.contact_col_2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 0 0;
+}
+
+.contact_input {
+    font-family: Poppins;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.contact_input:focus {
+    outline: none;
+}
+
+.row_1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#name,
+#email {
+    width: 49%;
+}
+
+#subject {
+    width: 100%;
+}
+
+#message {
+    width: 100%;
+    resize: none;
+}
+
+
+.contact_col_2 button {
+    color: #fff;
+    background: transparent;
+    border: 2px solid #dc143c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+    background: #dc143c;
+    width: fit-content;
+}
+
+.contact_col_2 button:hover {
+    color: #dc143c;
+    background: transparent;
+    transition: .2s;
+}
+
+
+
+
+/* ===========Copy Right=========== */
+
+.copyright_sec {
+    font-family: Poppins;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 10px 0;
+    height: 7vh;
+}
+
+.copyright_sec a {
+    color: #dc143c;
+    text-decoration: none;
+}
+
+.copyright_sec a:hover {
+    border-bottom: 1px solid #dc143c;
+}

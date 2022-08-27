@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="laptops_smallScreens.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="tablets_ipads.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="mobileDevices.css">
+    <script src="https://kit.fontawesome.com/c42ed3031b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- ===========Download CV Button=========== -->
+
+    <div id="fixed_download_cv">
+        <button>Download CV</button>
+    </div>
+
+    <!-- ===========Go to Top=========== -->
+
+    <div class="go_to_top">
+        <a href="#">
+            <button>
+                <i class="fa-solid fa-angle-up"></i>
+            </button>
+        </a>
+    </div>
+
+    <!-- ===========NavBar=========== -->
+
+    <nav>
+        <div>
+
+            <div class="logo">
+                <p>
+                    Portfo<span>lio.</span>
+                </p>
+            </div>
+            <div class="hidden hamburger">
+                <i onclick="hamburger()" class=" fa-solid fa-bars"></i>
+            </div>
+            <div class="nav_list">
+                <ul>
+                    <li class="nav_items">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="slide_bar">
+        <div class="close_btn">
+            <i onclick="close_navbar()" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="responsive_list">
+            <ul>
+                <li class="responsive_items"><a onclick="close_navbar()" href="#">Home</a></li>
+                <li class="responsive_items"><a onclick="close_navbar()" href="#about">About</a></li>
+                <li class="responsive_items"><a onclick="close_navbar()" href="#projects">Projects</a></li>
+                <li class="responsive_items"><a onclick="close_navbar()" href="#skills">Skills</a></li>
+                <li class="responsive_items"><a onclick="close_navbar()" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===========Home=========== -->
+
+    <div class="home">
+        <div>
+            <p>Hello,my name is</p>
+        </div>
+        <div>
+            <p>M.Ebad Arshad</p>
+        </div>
+        <!-- Typing Effect -->
+        <div>
+            And I'm am
+            <span class="txt-rotate" data-period="2000"
+                data-rotate='[ "a Problem Solver.", "a Logic Builder.", "a JavaScript Developer."]'></span>
+        </div>
+        <div class="hire_btn">
+            <button>Hire Me</button>
+        </div>
+    </div>
+
+    <!-- ===========About=========== -->
+
+    <div id="about" class="about_sec">
+        <div class="about_box">
+            <div class="heading">
+                <div class="topic">
+                    About me
+                </div>
+                <div class="topic_desc">
+                    <span></span>
+                    <p>who i am</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="desc">
+                <div class="desc_img"><img src="images/profile-1.jpg" alt=""></div>
+                <div class="desc_text">
+                    <div>
+                        I'm Ebad and I'm a
+                        <span class="txt-rotate desc_typing_effect" data-period="2000"
+                            data-rotate='[ "a Problem Solver.", "a Logic Builder.", "a JavaScript Developer."]'></span>
+                    </div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque
+                    autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus
+                    alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis,
+                    placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor
+                    iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===========Project=========== -->
+
+    <div class="project_sec" id="projects">
+        <div class="project_box">
+
+            <div class="heading">
+                <div class="topic">
+                    My Projects
+                </div>
+                <div class="topic_desc">
+                    <span></span>
+                    <p>what i have created</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="arrows">
+                <div>
+                    <div onclick="change_cards(--card_count)" class="move_backward">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div onclick="change_cards(++card_count)" class="move_forward">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="dots">
+                    <span onclick="slider_dots(0)"></span>
+                    <span onclick="slider_dots(1)"></span>
+                    <span onclick="slider_dots(2)"></span>
+                </div>
+            </div>
+
+            <div class="card_collection">
+                <div class="cards">
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/quiz_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Quiz Application</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank" href="https://github.com/ebad-arshad/quiz-app"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://ebad-quiz-app.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/search_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Search Application</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank"
+                                    href="https://github.com/ebad-arshad/search-filter-app"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://ebad-search-app.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/post_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Post Application</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank" href="https://github.com/ebad-arshad/post-app"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://ebad-post-app.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/todo_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Todo Application</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank" href="https://github.com/ebad-arshad/todo-app"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://ebad-todo-app.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/calculator_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Calculator Application</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank"
+                                    href="https://github.com/ebad-arshad/calculator-app"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://ebad-calculator-app.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/nft_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">NFT Website/Design</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank"
+                                    href="https://github.com/ebad-arshad/nft-website"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://nft-ebad.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards last_cards">
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/olx_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">OLX Website/Design</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank" href="https://github.com/ebad-arshad/olx-clone"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://olx-ebad.firebaseapp.com/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseout="default_card_image()" onmouseover="change_card_image()" class="card">
+                        <div class="icon"><img src="images/icons/figo_icon_hovered.png" alt=""></div>
+                        <div class="card_heading">Figo Website/Design</div>
+                        <div class="card_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt,
+                            quasi quo illo enim.</div>
+                        <div class="hidden_icons">
+                            <div class="col_1 col"><a target="_blank"
+                                    href="https://github.com/ebad-arshad/figo-website"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                            <div class="col_2 col"><a target="_blank"
+                                    href="https://www.linkedin.com/in/m-ebad-6a8760237/"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></div>
+                            <div class="col_3 col"><a target="_blank" href="https://figo-ebad.netlify.app/"><i
+                                        class="fa-solid fa-earth-asia"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===========Skills=========== -->
+
+    <div class="skills_sec" id="skills">
+        <div class="heading">
+            <div class="topic">
+                My Skills
+            </div>
+            <div class="topic_desc">
+                <span></span>
+                <p>what i know</p>
+                <span></span>
+            </div>
+        </div>
+        <div class="skill_data">
+            <div class="skill_col_1">
+                <p class="skill_heading">My creative skills & experiences.
+                </p>
+                <p class="skill_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione
+                    error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima
+                    sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam
+                    alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.
+            </div>
+            <div class="skill_col_2">
+                <div class="skill_lang">
+                    <div class="for_lang for_html">
+                        <p class="name">HTML</p>
+                        <p class="perc">90%</p>
+                    </div>
+                    <div class="range" style="--prog: 90%;"></div>
+                </div>
+                <div class="skill_lang">
+                    <div class="for_lang for_css">
+                        <p class="name">CSS</p>
+                        <p class="perc">70%</p>
+                    </div>
+                    <div class="range" style="--prog: 70%;"></div>
+                </div>
+                <div class="skill_lang">
+                    <div class="for_lang for_js">
+                        <p class="name">JavaScript</p>
+                        <p class="perc">60%</p>
+                    </div>
+                    <div class="range" style="--prog: 60%;"></div>
+                </div>
+                <div class="skill_lang">
+                    <div class="for_lang for_react">
+                        <p class="name">React</p>
+                        <p class="perc">0%</p>
+                    </div>
+                    <div class="range" style="--prog: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===========Contact Me=========== -->
+
+    <div class="contact_sec" id="contact">
+        <div class="heading">
+            <div class="topic">
+                Contact me
+            </div>
+            <div class="topic_desc">
+                <span></span>
+                <p>get in touch</p>
+                <span></span>
+            </div>
+        </div>
+        <div class="contact_data">
+            <div class="contact_col_1">
+                <p class="contact_heading">Get in Touch</p>
+                <p class="contact_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum
+                    corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                <div class="contact_info">
+                    <div class="contact_name">
+                        <div class="name_icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="contact_row_1">
+                            <p class="name_heading">Name</p>
+                            <p class="name_value">Muhammad Ebad Arshad</p>
+                        </div>
+                    </div>
+                    <div class="contact_email">
+                        <div class="email_icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact_row_2">
+                            <p class="email_heading">Email</p>
+                            <p class="email_value">m.ebadarshad2003@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_col_2">
+                <p class="contact_heading">Message me</p>
+                <form>
+                    <div class="row_1">
+                        <input type="text" class="contact_input" placeholder="Name" name="name" id="name">
+                        <input type="text" class="contact_input" placeholder="Email" name="email" id="email">
+                    </div>
+                    <div class="row_2">
+                        <input type="text" class="contact_input" placeholder="Subject" name="subject" id="subject">
+                    </div>
+                    <div class="row_3">
+                        <textarea class="contact_input" placeholder="Message.." name="message" id="message"></textarea>
+                    </div>
+                    <button>Send message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ===========Copy Right=========== -->
+
+    <div class="copyright_sec" id="copyright">
+        <p>Created by <a target="_blank" href="https://github.com/ebad-arshad"> Muhammad Ebad Arshad</a> | © 2022 All
+            rights reserved.</p>
+    </div>
+
+</body>
+<script src="app.js">
+
+
+</script>
+
+</html>
